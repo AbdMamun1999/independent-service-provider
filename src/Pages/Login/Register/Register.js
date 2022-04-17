@@ -16,7 +16,7 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
 
       const handleEmailValue = event =>{
         setEmail(event.target.value)
@@ -30,13 +30,18 @@ const Register = () => {
           setConfirmPassword(event.target.value)
       }
 
-      
+      if(loading){
+          return <loading></loading>
+      }
 
       const handleRegisterSubmit = event =>{
           event.preventDefault()
           if(password===confirmPassword){
             createUserWithEmailAndPassword(email,password)
+            navigate('/')
           }
+          
+          
       }
 
 
