@@ -35,11 +35,14 @@ const Register = () => {
           return <Loading></Loading>
       }
 
+      if(user){
+        navigate('/')
+      }
+
       const handleRegisterSubmit = event =>{
           event.preventDefault()
           if(password===confirmPassword){
             createUserWithEmailAndPassword(email,password)
-            navigate('/')
           }
           
           
