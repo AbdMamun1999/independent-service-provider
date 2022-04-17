@@ -1,0 +1,23 @@
+.register-form{
+    width: 60%;
+    margin: auto;
+}
+.register-form input{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1rem;
+    
+}
+
+
+
+.register-form input[type=submit]{
+    background-color: blue;
+    border: none;
+
+}
