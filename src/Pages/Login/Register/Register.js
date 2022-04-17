@@ -2,6 +2,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loging';
 // import './Register.css'
 
 const Register = () => {
@@ -31,7 +32,7 @@ const Register = () => {
       }
 
       if(loading){
-          return <loading></loading>
+          return <Loading></Loading>
       }
 
       const handleRegisterSubmit = event =>{
