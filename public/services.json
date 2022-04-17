@@ -1,0 +1,7 @@
+[
+    {"id":1,"name":"Dental Cleaning / Scaling Polishing" , "cost":450, "description":"Scaling removes all the dirt from your teeth, but polishing is the procedure that helps prevent and delay future attachment and accumulation of new dirt."},
+
+    {"id":2,"name":"Gum Disease & Periodontal Therapy" , "cost":450, "description":"Scaling removes all the dirt from your teeth, but polishing is the procedure that helps prevent and delay future attachment and accumulation of new dirt."},
+
+    {"id":3,"name":"Root Canal & Treatments" , "cost":450, "description":"Scaling removes all the dirt from your teeth, but polishing is the procedure that helps prevent and delay future attachment and accumulation of new dirt."}
+]
