@@ -11,8 +11,11 @@ const Login = () => {
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
+    
 
     let from = location.state?.from?.pathname || '/'
+
+    let errorMassage;
 
     const [
         signInWithEmailAndPassword,
@@ -29,6 +32,10 @@ const Login = () => {
         setPassword(event.target.value)
     }
 
+    if(error){
+        errorMassage = error.message;
+    }
+
     if (loading) {
         return <Loading></Loading>
     }
@@ -42,6 +49,7 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
 
     }
+    console.log(error)
 
     return (
         <div className='w-50 mx-auto'>
@@ -67,6 +75,9 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            {
+                <p className='text-danger'>{errorMassage}</p>
+            }
             <p>Are you new to Dentist Service Care <Link to="/register" className='text-primary pe-auto text-decoration-none'>Please Register</Link> </p>
 
         </div>
