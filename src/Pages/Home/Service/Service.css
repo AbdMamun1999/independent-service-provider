@@ -1,0 +1,8 @@
+.service-img{
+    width: 385px;
+}
+@media screen and (max-width:576px) {
+    .service-img{
+        width: 300px;
+    }
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Service.css'
 
 const Service = ({ service }) => {
-    const { name, description,id } = service;
+    const { name, description,id,img } = service;
     const navigate = useNavigate()
     const handleToCheckOut = (id) =>{
         navigate(`services/${id}`)
@@ -10,11 +11,10 @@ const Service = ({ service }) => {
     console.log(id)
 
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4'>
-            <h2 className='fs-4'>{name}</h2>
-            <h4 className='fs-6'>Why {name}?</h4>
+        <div className=' border p-3 border-rounded'>
+            <h2 className='fs-5 pt-3'>{name}</h2>
             <p>{description}</p>
-            <button onClick={()=>handleToCheckOut(id)}>Check Out</button>
+            <button className='mx-auto d-block' onClick={()=>handleToCheckOut(id)}>Check Out</button>
         </div>
     );
 };

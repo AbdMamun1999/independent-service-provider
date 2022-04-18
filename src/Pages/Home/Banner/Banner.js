@@ -46,7 +46,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Putin tooth</h3>
+                    <h3>Puting tooth</h3>
                     <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                     </p>
