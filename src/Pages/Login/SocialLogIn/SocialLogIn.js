@@ -2,20 +2,26 @@ import React from 'react';
 import google from '../../../images/logo/google.png'
 import github from '../../../images/logo/gitHub.png'
 import './SocialLogin.css'
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
 const SocialLogIn = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGithub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
+
     const navigate = useNavigate()
 
-    if(user){
+    if(user || userGit){
         navigate('/')
     }
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
+    }
+
+    const handleSignInWithGitHub = () =>{
+        signInWithGithub()
     }
     return (
         <div className='socialmedia-container'>
@@ -26,7 +32,9 @@ const SocialLogIn = () => {
                 <img src={google} alt="" />
                 <span>Sign in with Google</span>
             </button>
-            <button className='d-flex justify-content-center align-items-center github' height="10px">
+            <button 
+                onClick={handleSignInWithGitHub}
+            className='d-flex justify-content-center align-items-center github' height="10px">
                 <img src={github} alt="" />
                 <span>Sing in with GitHub</span>
             </button>
