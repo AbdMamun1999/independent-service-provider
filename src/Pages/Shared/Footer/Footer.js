@@ -1,11 +1,12 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     const date = new Date().getFullYear()
     return (
         <div className='bg-dark mt-5 text-white p-5'>
-            <div className=' d-flex justify-content-between align-items-center'>
-                <p className='text-white'><small>copy right &copy {date}</small></p>
+            <div className='footer-flex'>
+                <p className='text-white copy-right'><small>copy right &copy {date}</small></p>
                 <div>
                     <h4>
                         CONTACT
