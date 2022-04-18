@@ -1,6 +1,23 @@
 # DentalCare
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# bullet point
+* This is some menu and every page have different routes
+* Create a protected route by pressing the checkout button.If you are logged in, you will not be able to see checkout page, or you will be asked to login
+* To login to this website with Google, GitHub, email and password
+* you sign up with email or password.Email will be verified when sign up with email and password
+* If you enter the wrong email and password while logging in, you will get an error
+* create a carousel section
+* add copy right in footer 
+
+# Use Technology in the project
+* react
+* react-bootstrap
+* boostrap
+* firebase
+* react-router
+* firebase authentication
+* firebase-hooke 
+
 
 ## Available Scripts
 
