@@ -4,10 +4,11 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loging';
+import SocialLogIn from '../SocialLogIn/SocialLogIn';
 
 const Login = () => {
-    const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -18,32 +19,36 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
-      
-      const handleEmailValue = event =>{
-          setEmail(event.target.value)
-      }
+    ] = useSignInWithEmailAndPassword(auth);
 
-      const handlePasswordValue = event =>{
-          setPassword(event.target.value)
-      }
+    const handleEmailValue = event => {
+        setEmail(event.target.value)
+    }
 
-      if(loading){
-          return <Loading></Loading>
-      }
+    const handlePasswordValue = event => {
+        setPassword(event.target.value)
+    }
 
-      if(user){
-          navigate(from,{replace:true});
-      }
+    if (loading) {
+        return <Loading></Loading>
+    }
 
-      const handleLogInSubmit = event =>{
-          event.preventDefault()
-          signInWithEmailAndPassword(email,password)
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
-      }
+    const handleLogInSubmit = event => {
+        event.preventDefault()
+        signInWithEmailAndPassword(email, password)
+
+    }
 
     return (
         <div className='w-50 mx-auto'>
+            <div className='mt-5 mb-4'>
+                <SocialLogIn></SocialLogIn>
+            </div>
+            <p className='text-center fs-4'>or</p>
             <h2 className='text-center text-primary'>Please Login</h2>
             <Form onSubmit={handleLogInSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -58,11 +63,12 @@ const Login = () => {
                 <Form.Group className="mb-3 " controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button className='w-50 primary mx-auto d-block mb-3' variant="primary" type="submit">
-                   Login
+                <Button className='primary mx-auto d-block mb-3 w-100' variant="primary" type="submit">
+                    Login
                 </Button>
             </Form>
             <p>Are you new to Dentist Service Care <Link to="/register" className='text-primary pe-auto text-decoration-none'>Please Register</Link> </p>
+
         </div>
     );
 };
