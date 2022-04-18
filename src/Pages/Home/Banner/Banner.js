@@ -23,7 +23,7 @@ const Banner = () => {
                 />
                 <Carousel.Caption>
                     <h3>Root Canal</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <p>In addition to your daily home dental care routine, regular cleanings by a hygienist/ dentist are essential to maintaining your oral health. .</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -35,7 +35,7 @@ const Banner = () => {
 
                 <Carousel.Caption>
                     <h3 className='text-dark'>Modern Technology For Dental Treatment</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Dental Implants are a modern alternative to dentures. They can be used to replace a single tooth, or they can be used as part of a bridge to replace several teeth.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -46,9 +46,9 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Puting tooth</h3>
+                    <h3>Fillings tooth</h3>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    To treat a cavity, we will remove the decayed portion of your tooth and then "fill" the area on the tooth where the decayed material was removed
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
